@@ -184,6 +184,10 @@ dependencies {
     }
     compile "org.springframework.boot:spring-boot-starter-undertow"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+
+    compile "org.springframework.boot:spring-boot-starter-data-neo4j"
+    compile "org.neo4j:neo4j-ogm-bolt-driver:2.1.1"
+
     compile "org.zalando:problem-spring-web:${problem_spring_web_version}"
     compile "org.springframework.cloud:spring-cloud-starter"
     compile "org.springframework.cloud:spring-cloud-starter-ribbon"
@@ -204,6 +208,15 @@ dependencies {
     compile ("io.springfox:springfox-swagger2:${springfox_version}") {
         exclude module: 'mapstruct'
     }
+
+
+
+    compile('org.springframework.boot:spring-boot-starter-amqp')
+
+    // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
+    compile group: 'com.querydsl', name: 'querydsl-jpa', version: '4.1.4'
+
+
     compile "io.springfox:springfox-bean-validators:${springfox_version}"
     compile "org.mapstruct:mapstruct-jdk8:${mapstruct_version}"
     testCompile "org.awaitility:awaitility:${awaitility_version}"
